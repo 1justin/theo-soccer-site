@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Theo Mayer — Forward / Midfielder — Glen Ellyn Lakers FC",
   description:
-    "Player profile for Theo Mayer, a 10-year-old forward and midfielder for Glen Ellyn Lakers FC Elite. Two-footed, technically sharp, captain, and student-athlete.",
+    "Player profile for Theo Mayer, a 10-year-old forward and midfielder for Glen Ellyn Lakers FC Elite. Two-footed passer and dribbler, technically sharp, captain, and student-athlete.",
   keywords: [
     "Theo Mayer",
     "soccer",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Theo Mayer — Forward / Midfielder",
     description:
-      "Player profile for Theo Mayer. Two-footed winger with elite football IQ, team captain, and student-athlete.",
+      "Player profile for Theo Mayer. Two-footed passer and dribbler with elite soccer IQ, team captain, and student-athlete.",
     url: "https://theomayersoccer.com",
     siteName: "Theo Mayer Soccer",
     type: "website",

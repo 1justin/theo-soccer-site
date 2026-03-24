@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "The Story — Theo Mayer Soccer",
   description:
-    "From zero goals in house league to captain of the Elite squad. The progression story of Theo Mayer.",
+    "From house league to the top team in the club, playing up a grade level. The progression story of Theo Mayer.",
 };
 
 export default function StoryPage() {
@@ -15,7 +16,7 @@ export default function StoryPage() {
       {/* ============================================
           STORY HERO
           ============================================ */}
-      <section className="relative bg-void noise-bg pt-32 pb-20 md:pb-32 overflow-hidden">
+      <section className="relative bg-void noise-bg pt-24 pb-16 md:pb-24 overflow-hidden">
         {/* Background number */}
         <div
           className="absolute right-[-5%] top-1/2 -translate-y-1/2 select-none pointer-events-none z-0"
@@ -42,14 +43,14 @@ export default function StoryPage() {
               letterSpacing: "-2px",
             }}
           >
-            From Zero
+            The
             <br />
-            <span className="text-volt">to Captain</span>
+            <span className="text-volt">Pattern</span>
           </h1>
           <p className="text-white-secondary text-lg mt-8 max-w-[32rem]">
-            He started with zero goals. By the time he was 10, he was playing up
-            a year, holding his own against older, stronger kids, and his coach
-            had already made him captain.
+            He went from house league soccer to the top team in the club,
+            playing up a grade level and subbing in with teams even older than
+            that. Fearless. Passionate. Figures it out as he goes.
           </p>
         </div>
       </section>
@@ -70,7 +71,7 @@ export default function StoryPage() {
                 letterSpacing: "-1px",
               }}
             >
-              The Pattern
+              The Arc
             </h2>
           </ScrollReveal>
 
@@ -116,11 +117,17 @@ export default function StoryPage() {
           <ScrollReveal>
             <div className="space-y-6 text-charcoal text-base leading-relaxed">
               <p>
+                The next season, something clicked. He scored constantly, and his
+                coaches moved him up to Lakers Academy early. Coach James Reiman
+                named him Most Improved Player, and still shows up to
+                Theo&apos;s travel games years later.
+              </p>
+              <p>
                 His coaches at Glen Ellyn Lakers noticed early. He was invited to
                 Lakers Academy, a coach-run development program that serves as a
                 feeder to the competitive teams. He did not just fit in. He stood
-                out. He was promoted directly to Lakers Select (Tier 3) for Fall
-                2023 without a formal tryout.
+                out. He was promoted directly to Lakers Select for Fall 2023
+                without a formal tryout.
               </p>
             </div>
           </ScrollReveal>
@@ -137,7 +144,7 @@ export default function StoryPage() {
                 {
                   period: "Lakers Academy",
                   title: "Noticed",
-                  desc: "Invited to the development program. Stood out immediately. Promoted to Lakers Select (Tier 3) without a formal tryout.",
+                  desc: "Invited to the development program. Stood out immediately. Promoted to Lakers Select without a formal tryout.",
                 },
                 {
                   period: "Fall 2023",
@@ -147,7 +154,7 @@ export default function StoryPage() {
                 {
                   period: "2023-2024",
                   title: "The Swiss Army Knife",
-                  desc: "Became the go-to player for anything the coach needed. Wing and midfield. Named team captain for the 2024-2025 season by Coach Tyler Birt.",
+                  desc: "Became the go-to player for anything the coach needed. Wing and midfield. Named team captain for the 2024-2025 season by Coach Will Segovia.",
                 },
                 {
                   period: "Spring 2025",
@@ -157,7 +164,7 @@ export default function StoryPage() {
                 {
                   period: "Fall 2025",
                   title: "New Level, New Start",
-                  desc: "Promoted to Tier 1 Elite. Playing up against 5th graders as a 4th grader. Shifted to facilitator: all assists, no goals. Absorbing the new speed.",
+                  desc: "Promoted to Lakers Elite. Playing up against 5th graders as a 4th grader. Shifted to facilitator: all assists, no goals. Absorbing the new speed.",
                 },
                 {
                   period: "Winter 2025-2026",
@@ -267,7 +274,7 @@ export default function StoryPage() {
                   "First touch rated above average to elite at his level",
                   "Full skill set with both feet: Maradona turns, tick-tacks, step-overs, rainbow flicks",
                   "Exceptional vision and passing, he makes teammates better",
-                  "Named team captain for 2024-2025 by Coach Tyler Birt",
+                  "Named team captain for the 2024-2025 season by Coach Will Segovia",
                   "Craves coaching feedback, processes it, and gets better in the same session",
                   "Self-directed learner: watches training videos independently",
                   "Celebrates an assist with the same energy as a goal",
@@ -410,8 +417,7 @@ export default function StoryPage() {
                   Aurora, IL
                 </p>
                 <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  Multiple appearances. Competed against clubs from across the
-                  region.
+                  3 appearances. Competed against clubs from across the region.
                 </p>
               </div>
             </ScrollReveal>
@@ -428,10 +434,9 @@ export default function StoryPage() {
                   Minneapolis, MN
                 </p>
                 <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  One of the largest and most well-organized youth tournaments
-                  in the country. Theo&apos;s first USA Cup was with a mixed
-                  team, top players blended with Tier 2. He stood out with
-                  goals, assists, and leadership.
+                  3 appearances. One of the largest youth tournaments in the
+                  country. Theo&apos;s first USA Cup was on a mixed team. He
+                  stood out with goals, assists, and leadership.
                 </p>
               </div>
             </ScrollReveal>
@@ -504,14 +509,6 @@ export default function StoryPage() {
               </div>
             </ScrollReveal>
           </div>
-
-          <ScrollReveal>
-            <p className="text-charcoal text-sm leading-relaxed mt-12 italic">
-              This is a 10-year-old talking. A kid who can articulate why he
-              plays like those specific players, not just name-dropping, is a
-              detail that will stick with any serious reader.
-            </p>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -645,23 +642,50 @@ export default function StoryPage() {
               </p>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
 
-          <ScrollReveal>
-            <div className="mt-12 flex flex-wrap gap-4">
-              <Link
-                href="/#contact"
-                className="bg-void text-white text-sm font-semibold uppercase tracking-wider px-8 py-4 hover:bg-graphite transition-colors inline-block"
-              >
-                Contact Theo&apos;s Family
-              </Link>
-              <Link
-                href="/"
-                className="border border-ink text-ink text-sm font-semibold uppercase tracking-wider px-8 py-4 hover:bg-ink hover:text-white transition-colors inline-block"
-              >
-                Back to Home
-              </Link>
-            </div>
-          </ScrollReveal>
+      {/* ============================================
+          CONTACT SECTION
+          ============================================ */}
+      <section
+        id="contact"
+        className="relative bg-carbon py-20 md:py-32 noise-bg"
+      >
+        <div
+          className="absolute left-[-5%] top-1/2 -translate-y-1/2 select-none pointer-events-none z-0"
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(150px, 25vw, 300px)",
+            fontWeight: 700,
+            color: "rgba(255, 255, 255, 0.03)",
+            lineHeight: 1,
+          }}
+        >
+          5
+        </div>
+
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-4">
+              Get in Touch
+            </p>
+            <h2
+              className="text-white text-4xl md:text-5xl font-semibold uppercase leading-tight"
+              style={{
+                fontFamily: "var(--font-display)",
+                letterSpacing: "-1px",
+              }}
+            >
+              Contact
+            </h2>
+            <p className="text-white-secondary mt-4 max-w-[28rem] mx-auto">
+              Interested in Theo as a player? Reach out directly. All
+              communication is handled through his parent.
+            </p>
+          </div>
+
+          <ContactForm />
         </div>
       </section>
     </>
