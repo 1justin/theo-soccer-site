@@ -13,7 +13,7 @@ export default function Home() {
       <section className="relative bg-void noise-bg overflow-hidden">
         {/* BG Layer 1: #5 watermark — large, right side */}
         <div
-          className="absolute right-[5%] top-[8%] select-none pointer-events-none z-[1]"
+          className="absolute right-[5%] top-[23%] select-none pointer-events-none z-[1]"
           style={{
             fontFamily: "var(--font-display)",
             fontSize: "clamp(280px, 50vw, 600px)",
@@ -25,8 +25,8 @@ export default function Home() {
           5
         </div>
 
-        {/* BG Layer 2: Lakers logo — full color, aligned with name on left */}
-        <div className="absolute left-6 md:left-10 bottom-[200px] md:bottom-[260px] select-none pointer-events-none z-[2] opacity-90">
+        {/* BG Layer 2: Lakers logo — full color, top-left, left-aligned with name */}
+        <div className="absolute left-6 md:left-10 top-[80px] md:top-[72px] select-none pointer-events-none z-[2]">
           <Image
             src="/images/lakers-fc-logo.png"
             alt=""
