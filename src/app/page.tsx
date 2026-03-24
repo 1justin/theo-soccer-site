@@ -10,103 +10,134 @@ export default function Home() {
       {/* ============================================
           HERO SECTION
           ============================================ */}
-      <section className="relative bg-void noise-bg overflow-hidden">
-        {/* Oversized jersey number texture — positioned behind the photo */}
+      <section className="relative bg-void noise-bg overflow-hidden min-h-screen flex flex-col">
+        {/* BG Layer 1: #5 watermark — large, centered */}
         <div
-          className="absolute right-[5%] top-[15%] select-none pointer-events-none z-0"
+          className="absolute left-1/2 -translate-x-1/2 top-[5%] select-none pointer-events-none z-[1]"
           style={{
             fontFamily: "var(--font-display)",
-            fontSize: "clamp(200px, 35vw, 400px)",
+            fontSize: "clamp(300px, 55vw, 700px)",
             fontWeight: 700,
-            color: "rgba(255, 255, 255, 0.04)",
+            color: "rgba(255, 255, 255, 0.03)",
             lineHeight: 1,
           }}
         >
           5
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 pt-20 pb-12 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Text Content */}
+        {/* BG Layer 2: Lakers logo — subtle, left side */}
+        <div className="absolute left-[6%] top-[18%] select-none pointer-events-none z-[2] opacity-[0.04]">
+          <Image
+            src="/images/lakers-fc-logo.png"
+            alt=""
+            width={220}
+            height={220}
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* Main hero content */}
+        <div className="relative flex-1 flex flex-col max-w-[1400px] mx-auto px-6 w-full pt-20">
+
+          {/* Center stage: Player + Name layered */}
+          <div className="relative flex-1 flex justify-center items-end">
+
+            {/* Giant name — BEHIND player */}
+            <h1
+              className="absolute inset-x-0 bottom-[18%] md:bottom-[22%] text-center z-[5] select-none pointer-events-none uppercase font-bold hero-name-fade"
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(72px, 16vw, 240px)",
+                letterSpacing: "-0.03em",
+                lineHeight: 0.82,
+                color: "white",
+              }}
+            >
+              <span className="block">Theo</span>
+              <span className="block">Mayer</span>
+            </h1>
+
+            {/* Player image — IN FRONT of name */}
+            <div
+              className="relative z-[10] hero-player-fade"
+              style={{ width: "clamp(250px, 38vw, 500px)" }}
+            >
+              <Image
+                src="/images/theo-hero-studio-ball-on-shoulder.png"
+                alt="Theo Mayer in Lakers FC jersey, pointing at camera with soccer ball on shoulder"
+                width={1191}
+                height={1440}
+                className="w-full h-auto"
+                priority
+                sizes="(max-width: 768px) 70vw, 38vw"
+              />
+            </div>
+          </div>
+
+          {/* Bottom info bar */}
+          <div className="relative z-[20] flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pb-10 md:pb-14 pt-4">
             <div>
-              <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-6 hero-fade">
+              <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-3 hero-fade">
                 Forward / Midfielder — #5
               </p>
-
-              <h1
-                className="uppercase font-bold leading-[0.9] tracking-tight hero-fade"
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "clamp(60px, 10vw, 140px)",
-                  letterSpacing: "-2px",
-                }}
-              >
-                Theo
-                <br />
-                Mayer
-              </h1>
-
-              <p className="text-white-secondary text-lg mt-6 max-w-[28rem] hero-fade">
+              <p className="text-white-secondary text-base max-w-[26rem] hero-fade">
                 Creative winger and midfielder with elite soccer IQ. Two-footed
                 passer and dribbler. Comfortable on either wing. Captain
-                &apos;24-&apos;25. Student-athlete. Glen Ellyn Lakers FC Elite.
+                &apos;24-&apos;25. Glen Ellyn Lakers FC Elite.
               </p>
-
-              {/* Quick coach quote */}
-              <div className="mt-8 border-l-[3px] border-pitch pl-6 hero-fade">
-                <p className="text-white-secondary italic text-base">
-                  &ldquo;His style is elegant.&rdquo;
-                </p>
-                <p className="text-white-tertiary text-sm mt-2">
-                  — Coach Will Segovia, Director of Coaching, Glen Ellyn Lakers
-                  FC
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-4 mt-10 hero-fade">
-                <Link
-                  href="#contact"
-                  className="bg-volt text-void text-sm font-semibold uppercase tracking-wider px-8 py-4 hover:bg-volt-hover transition-colors inline-block"
-                >
-                  Contact Theo&apos;s Family
-                </Link>
-                <Link
-                  href="/story"
-                  className="border border-white text-white text-sm font-semibold uppercase tracking-wider px-8 py-4 hover:bg-white/10 transition-colors inline-block"
-                >
-                  Read the Story
-                </Link>
-              </div>
             </div>
-
-            {/* Right: Hero Image — Studio shot */}
-            <div className="relative flex items-center justify-center">
-              <div className="relative w-full max-w-[28rem] aspect-[3/4] overflow-hidden">
-                <Image
-                  src="/images/theo-hero-studio-ball-on-shoulder.png"
-                  alt="Theo Mayer in Lakers FC jersey, pointing at camera with soccer ball on shoulder"
-                  fill
-                  className="object-contain object-bottom"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
+            <div className="flex flex-wrap gap-4 hero-fade">
+              <Link
+                href="#contact"
+                className="bg-volt text-void text-sm font-semibold uppercase tracking-wider px-8 py-4 hover:bg-volt-hover transition-colors inline-block"
+              >
+                Contact Theo&apos;s Family
+              </Link>
+              <Link
+                href="/story"
+                className="border border-white text-white text-sm font-semibold uppercase tracking-wider px-8 py-4 hover:bg-white/10 transition-colors inline-block"
+              >
+                Read the Story
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Hero fade-in animation */}
+        {/* Hero animations */}
         <style>{`
-          .hero-fade {
-            animation: heroFadeUp 0.6s ease-out both;
+          .hero-player-fade {
+            animation: heroPlayerIn 0.8s ease-out 0.1s both;
           }
-          .hero-fade:nth-child(1) { animation-delay: 0ms; }
-          .hero-fade:nth-child(2) { animation-delay: 100ms; }
-          .hero-fade:nth-child(3) { animation-delay: 200ms; }
-          .hero-fade:nth-child(4) { animation-delay: 300ms; }
-          .hero-fade:nth-child(5) { animation-delay: 400ms; }
-          .hero-fade:nth-child(6) { animation-delay: 500ms; }
+          .hero-name-fade {
+            animation: heroNameIn 0.6s ease-out 0.3s both;
+          }
+          .hero-fade {
+            animation: heroFadeUp 0.5s ease-out both;
+          }
+          .hero-fade:nth-child(1) { animation-delay: 0.5s; }
+          .hero-fade:nth-child(2) { animation-delay: 0.6s; }
+          .hero-fade:nth-child(3) { animation-delay: 0.7s; }
 
+          @keyframes heroPlayerIn {
+            from {
+              opacity: 0;
+              transform: translateY(30px) scale(0.97);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+          }
+          @keyframes heroNameIn {
+            from {
+              opacity: 0;
+              transform: scale(0.92);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
           @keyframes heroFadeUp {
             from {
               opacity: 0;
