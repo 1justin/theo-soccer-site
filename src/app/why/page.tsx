@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -154,6 +155,21 @@ export default function WhyPage() {
                 the visual direction. The content on this site is his story told
                 in his voice (with a little editorial polish from dad).
               </p>
+              {/* Father-son photo */}
+              <div className="relative aspect-[4/3] overflow-hidden my-2">
+                <Image
+                  src="/images/theo-and-his-dad-justin-chicago-fire-match-july-2023.jpg"
+                  alt="Theo and his dad at a Chicago Fire match, Soldier Field, July 2023"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                />
+              </div>
+              <p className="text-stone text-xs italic mb-6">
+                Theo and his dad at a Chicago Fire match, Soldier Field, July
+                2023. The Fire Academy is the long-term goal.
+              </p>
+
               <p>
                 The project gave father and son a shared creative endeavor that
                 sits at the intersection of Theo&apos;s world (soccer) and his

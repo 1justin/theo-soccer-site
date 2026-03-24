@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import StatCard from "@/components/StatCard";
 import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -29,7 +30,7 @@ export default function Home() {
             {/* Left: Text Content */}
             <div>
               <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-6 hero-fade">
-                Forward / Midfielder — #5
+                Winger — #5
               </p>
 
               <h1
@@ -46,7 +47,8 @@ export default function Home() {
               </h1>
 
               <p className="text-white-secondary text-lg mt-6 max-w-md hero-fade">
-                Two-footed winger with elite football IQ. Team captain.
+                Creative winger with elite soccer IQ. Two-footed passer and
+                dribbler. Comfortable on either wing. Captain &apos;24-&apos;25.
                 Student-athlete. Glen Ellyn Lakers FC Elite.
               </p>
 
@@ -56,7 +58,8 @@ export default function Home() {
                   &ldquo;His style is elegant.&rdquo;
                 </p>
                 <p className="text-white-tertiary text-sm mt-2">
-                  — Coach, Glen Ellyn Lakers FC
+                  — Coach Will Segovia, Director of Coaching, Glen Ellyn Lakers
+                  FC
                 </p>
               </div>
 
@@ -76,33 +79,17 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Hero Image Placeholder */}
+            {/* Right: Interim Hero Image (back-of-jersey shot) */}
             <div className="relative flex items-center justify-center">
-              <div className="relative w-full max-w-md aspect-[3/4] bg-graphite border border-smoke flex items-center justify-center">
-                <div className="text-center px-8">
-                  <div
-                    className="text-white-tertiary text-6xl mb-4"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    5
-                  </div>
-                  <p className="text-white-tertiary text-sm uppercase tracking-wider">
-                    Hero photo coming soon
-                  </p>
-                  <p className="text-white-tertiary text-xs mt-2">
-                    Theo in full kit, golden hour
-                  </p>
-                </div>
-
-                {/* When real image is ready, replace the above div with:
+              <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/images/theo-hero.webp"
-                  alt="Theo Mayer in Glen Ellyn Lakers FC kit"
+                  src="/images/theo-back-of-jersey-summer-2025-9-years-old.jpg"
+                  alt="Theo Mayer wearing MAYER #5 jersey, looking out at the field, Summer 2025"
                   fill
                   className="object-cover"
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
-                /> */}
+                />
               </div>
             </div>
           </div>
@@ -139,15 +126,20 @@ export default function Home() {
       <section className="bg-carbon py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6">
           <ScrollReveal>
-            <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-8">
+            <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-2">
               By the Numbers
+            </p>
+            <p className="text-white-secondary text-sm mb-8 max-w-lg">
+              We don&apos;t count every stat. We count what matters:
+              progression, adaptability, and the willingness to do whatever the
+              team needs.
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <StatCard value="31" label="Goals Scored" stagger={0} />
+            <StatCard value="25+" label="Spring 2025 Goals" stagger={0} />
             <StatCard value="3" label="Competitive Seasons" stagger={1} />
             <StatCard value="10" label="Years Old" stagger={2} />
-            <StatCard value="1" label="Team Captain" stagger={3} />
+            <StatCard value="'24-'25" label="Team Captain" stagger={3} />
           </div>
         </div>
       </section>
@@ -158,12 +150,16 @@ export default function Home() {
       <section className="bg-snow py-20 md:py-32">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Image placeholder */}
+            {/* Action photo */}
             <ScrollReveal>
-              <div className="aspect-[4/3] bg-mist flex items-center justify-center">
-                <p className="text-stone text-sm uppercase tracking-wider">
-                  Action photo coming soon
-                </p>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/theo-action-dribbling-nov-2024.jpg"
+                  alt="Theo Mayer dribbling past a defender during a Lakers FC friendly, November 2024"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </ScrollReveal>
 
@@ -185,15 +181,16 @@ export default function Home() {
               </h2>
               <p className="text-charcoal text-base leading-relaxed mt-6">
                 Theo is a creative playmaker who sees the field like a player
-                twice his age. Two-footed, technically sharp, and wired to find
-                the pass nobody else saw. He models his game after Michael Olise,
-                Desir&eacute; Dou&eacute;, and Lamine Yamal, not because
-                they&apos;re famous, but because he can tell you exactly why
-                their style matches his.
+                twice his age. Comfortable on either wing. Two-footed passer and
+                dribbler, wired to find the pass nobody else saw. He models his
+                game after Michael Olise, Desir&eacute; Dou&eacute;, and Lamine
+                Yamal, not because they&apos;re famous, but because he can tell
+                you exactly why their style matches his.
               </p>
               <p className="text-charcoal text-base leading-relaxed mt-4">
                 Promoted from house league to the Lakers Elite squad in under
-                two seasons. Named team captain at age 10. The kind of kid who
+                two seasons. Named team captain for the 2024-2025 season by
+                Coach Will Segovia, Director of Coaching. The kind of kid who
                 makes everyone around him better because he&apos;s thinking two
                 moves ahead.
               </p>
@@ -209,7 +206,7 @@ export default function Home() {
       </section>
 
       {/* ============================================
-          SEASON STATS SECTION
+          PROGRESSION TIMELINE
           ============================================ */}
       <section className="bg-cloud py-20 md:py-32">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -231,43 +228,44 @@ export default function Home() {
           <div className="space-y-4">
             {[
               {
-                season: "Winter 2026",
+                season: "Winter/Spring 2026",
                 team: "Lakers FC Elite (Tier 1)",
                 level: "Playing Up — U11",
-                goals: "6",
-                note: "Building momentum at the highest club level",
+                beat: "The takeover begins again. Goals returning.",
               },
               {
                 season: "Fall 2025",
                 team: "Lakers FC Elite (Tier 1)",
                 level: "Playing Up — U11",
-                goals: "0",
-                note: "Promoted to top team. Absorbing the speed. Named captain.",
+                beat: "Promoted to top team. Playing up a year. Shifted to facilitator. All assists, no goals. Absorbing the new speed.",
               },
               {
                 season: "Spring 2025",
-                team: "Lakers FC (Tier 3)",
+                team: "Lakers FC Select (Tier 3)",
                 level: "U10",
-                goals: "25",
-                note: "Breakout season. Top scorer. Earned Elite promotion.",
+                beat: "Breakout season. 25+ goals (we stopped counting). Won the championship. Earned promotion to Elite.",
               },
               {
-                season: "2024",
-                team: "Lakers FC (Tier 3)",
+                season: "2023-2024",
+                team: "Lakers FC Select (Tier 3)",
                 level: "U10",
-                goals: "—",
-                note: "First competitive season. Finding his footing at wing and midfield.",
+                beat: "Became the go-to player for anything the coach needed. Wing and midfield. Named team captain.",
               },
               {
-                season: "House League",
-                team: "Glen Ellyn Lakers",
-                level: "Recreational",
-                goals: "2",
-                note: "Zero goals all season. Then scored twice in the final game.",
+                season: "Fall 2023",
+                team: "Lakers FC Select (Tier 3)",
+                level: "U10",
+                beat: "Made the Lakers Select team. First competitive season.",
+              },
+              {
+                season: "2021-2022",
+                team: "Glen Ellyn Park District",
+                level: "House League",
+                beat: "Zero goals all season. Then scored twice in the final game. The pattern begins.",
               },
             ].map((row) => (
               <ScrollReveal key={row.season}>
-                <div className="bg-white border border-mist p-6 grid grid-cols-1 md:grid-cols-[180px_1fr_80px_1fr] gap-4 items-center">
+                <div className="bg-white border border-mist p-6 grid grid-cols-1 md:grid-cols-[180px_1fr_1fr] gap-4 items-center">
                   <div>
                     <p
                       className="text-ink font-semibold text-base"
@@ -278,18 +276,7 @@ export default function Home() {
                     <p className="text-stone text-xs mt-1">{row.level}</p>
                   </div>
                   <p className="text-charcoal text-sm">{row.team}</p>
-                  <div className="text-center">
-                    <p
-                      className="text-pitch text-2xl font-bold"
-                      style={{ fontFamily: "var(--font-mono)" }}
-                    >
-                      {row.goals}
-                    </p>
-                    <p className="text-stone text-[10px] uppercase tracking-wider">
-                      Goals
-                    </p>
-                  </div>
-                  <p className="text-stone text-sm italic">{row.note}</p>
+                  <p className="text-stone text-sm italic">{row.beat}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -321,11 +308,12 @@ export default function Home() {
             <ScrollReveal stagger={1}>
               <div className="border-l-[3px] border-pitch pl-6 py-2">
                 <p className="text-charcoal text-lg italic leading-relaxed">
-                  &ldquo;His style is elegant. He sees passes other kids his
-                  age don&apos;t even think about.&rdquo;
+                  &ldquo;His style is elegant. He sees passes other kids his age
+                  don&apos;t even think about.&rdquo;
                 </p>
                 <p className="text-stone text-sm mt-4">
-                  — Coach, Glen Ellyn Lakers FC
+                  — Coach Will Segovia, Director of Coaching, Glen Ellyn Lakers
+                  FC
                 </p>
               </div>
             </ScrollReveal>
@@ -336,9 +324,7 @@ export default function Home() {
                   Additional coach testimonials will be added as they are
                   collected.
                 </p>
-                <p className="text-stone text-sm mt-4">
-                  — More coming soon
-                </p>
+                <p className="text-stone text-sm mt-4">— More coming soon</p>
               </div>
             </ScrollReveal>
           </div>
@@ -346,7 +332,7 @@ export default function Home() {
       </section>
 
       {/* ============================================
-          MULTI-SPORT / CHARACTER SECTION
+          MORE THAN SOCCER SECTION
           ============================================ */}
       <section className="bg-cloud py-20 md:py-32">
         <div className="max-w-[1200px] mx-auto px-6">
@@ -365,40 +351,39 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Basketball — major rewrite */}
             <ScrollReveal stagger={1}>
-              <div className="bg-white border border-mist p-8">
-                <p className="text-3xl mb-1">⚽</p>
-                <h3
-                  className="text-ink text-xl font-semibold mt-4 uppercase"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  Soccer
-                </h3>
-                <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  Creative winger with elite vision. Team captain. 31+ goals
-                  across competitive play. Goal: Chicago Fire Academy.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal stagger={2}>
               <div className="bg-white border border-mist p-8">
                 <p className="text-3xl mb-1">🏀</p>
                 <h3
                   className="text-ink text-xl font-semibold mt-4 uppercase"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  Basketball
+                  Basketball MVP
                 </h3>
                 <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  Competitive basketball player. The footwork, court vision,
-                  and lateral quickness translate directly to the pitch.
+                  Named YMCA basketball league MVP, Spring 2026. In the
+                  championship game, Theo scored 20 of his team&apos;s 28 points
+                  while leading in assists, rebounds, and steals across both
+                  teams. Lost by 1 point.
+                </p>
+                <p className="text-charcoal text-sm leading-relaxed mt-3">
+                  The opposing coach, who had coached Theo the previous season,
+                  told him after the game: &ldquo;I love you. You almost beat us
+                  all by yourself.&rdquo; His team had spent a third of their
+                  practice watching film of Theo to scout him. It didn&apos;t
+                  matter.
+                </p>
+                <p className="text-stone text-xs mt-4 italic">
+                  Invited to play up 2 years for summer league after a coach saw
+                  what he could do against older competition.
                 </p>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal stagger={3}>
+            {/* Academics */}
+            <ScrollReveal stagger={2}>
               <div className="bg-white border border-mist p-8">
                 <p className="text-3xl mb-1">📚</p>
                 <h3
@@ -412,6 +397,46 @@ export default function Home() {
                   strategic thinking he brings to the field, he brings to the
                   classroom.
                 </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Tournament Experience */}
+            <ScrollReveal stagger={3}>
+              <div className="bg-white border border-mist p-8 md:col-span-2">
+                <p className="text-3xl mb-1">🏆</p>
+                <h3
+                  className="text-ink text-xl font-semibold mt-4 uppercase"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Tournament Experience
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                  <div>
+                    <p
+                      className="text-ink font-semibold text-sm"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      Puma Cup (Aurora, IL)
+                    </p>
+                    <p className="text-charcoal text-sm leading-relaxed mt-1">
+                      Multiple appearances. Competed against clubs from across
+                      the region.
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      className="text-ink font-semibold text-sm"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      USA Cup (Minneapolis, MN)
+                    </p>
+                    <p className="text-charcoal text-sm leading-relaxed mt-1">
+                      One of the largest youth tournaments in the country.
+                      Theo&apos;s first USA Cup was on a mixed team. He stood
+                      out with goals, assists, and leadership.
+                    </p>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>

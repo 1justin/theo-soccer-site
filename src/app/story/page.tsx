@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -90,12 +91,36 @@ export default function StoryPage() {
                 That quiet start before the takeover. That has been his signature
                 ever since.
               </p>
+            </div>
+          </ScrollReveal>
+
+          {/* House league celebration photo */}
+          <ScrollReveal>
+            <div className="mt-10 mb-6">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden">
+                <Image
+                  src="/images/theo-goal-celebration-house-league.jpg"
+                  alt="Young Theo celebrating a goal in his first house league season, arms outstretched, pure joy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                />
+              </div>
+              <p className="text-stone text-xs text-center mt-3 italic">
+                The final game. Zero goals all season, then two. The pattern
+                begins.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="space-y-6 text-charcoal text-base leading-relaxed">
               <p>
                 His coaches at Glen Ellyn Lakers noticed early. He was invited to
                 Lakers Academy, a coach-run development program that serves as a
                 feeder to the competitive teams. He did not just fit in. He stood
-                out. He was promoted directly to the tier 3 competitive team
-                without a formal tryout.
+                out. He was promoted directly to Lakers Select (Tier 3) for Fall
+                2023 without a formal tryout.
               </p>
             </div>
           </ScrollReveal>
@@ -105,36 +130,41 @@ export default function StoryPage() {
             <div className="mt-16 space-y-0">
               {[
                 {
-                  period: "House League",
+                  period: "House League (2021-2022)",
                   title: "The Beginning",
-                  desc: "Zero goals all season. Two in the final game. The pattern begins.",
+                  desc: "Glen Ellyn Park District. Zero goals all season. Two in the final game. Named 'Most Improved Player' by Coach James Reiman, who still comes to Theo's travel games years later.",
                 },
                 {
                   period: "Lakers Academy",
                   title: "Noticed",
-                  desc: "Invited to the development program. Stood out immediately. Promoted to Tier 3 without a tryout.",
+                  desc: "Invited to the development program. Stood out immediately. Promoted to Lakers Select (Tier 3) without a formal tryout.",
                 },
                 {
-                  period: "Year One (2024)",
-                  title: "Finding His Footing",
-                  desc: "Contributing as a wing. Added midfield halfway through the year. Learning the competitive game.",
+                  period: "Fall 2023",
+                  title: "First Competitive Season",
+                  desc: "Made the Lakers Select team. Learning the speed and structure of competitive play.",
+                },
+                {
+                  period: "2023-2024",
+                  title: "The Swiss Army Knife",
+                  desc: "Became the go-to player for anything the coach needed. Wing and midfield. Named team captain for the 2024-2025 season by Coach Will Segovia, Director of Coaching.",
                 },
                 {
                   period: "Spring 2025",
                   title: "The Breakout",
-                  desc: "25 goals in one season. Top player on the team. Earned promotion to Elite.",
+                  desc: "25+ goals in one season (we stopped counting). Top player on the team. Won the championship. Earned promotion to Elite.",
                 },
                 {
                   period: "Fall 2025",
                   title: "New Level, New Start",
-                  desc: "Promoted to Tier 1 Elite. Playing up against 5th graders as a 4th grader. Zero goals as he absorbed the new speed. Named team captain.",
+                  desc: "Promoted to Tier 1 Elite. Playing up against 5th graders as a 4th grader. Shifted to facilitator: all assists, no goals. Absorbing the new speed.",
                 },
                 {
-                  period: "Winter 2026",
+                  period: "Winter/Spring 2026",
                   title: "The Takeover Begins Again",
-                  desc: "Six goals and counting. The pattern repeats.",
+                  desc: "Goals returning. Building momentum at the highest club level. The pattern repeats.",
                 },
-              ].map((item, i) => (
+              ].map((item) => (
                 <div
                   key={item.period}
                   className="relative pl-8 pb-12 last:pb-0 border-l-2 border-mist last:border-l-0"
@@ -180,6 +210,21 @@ export default function StoryPage() {
             </h2>
           </ScrollReveal>
 
+          {/* Action photo — winger shot */}
+          <ScrollReveal>
+            <div className="mb-12">
+              <div className="relative aspect-[16/9] overflow-hidden">
+                <Image
+                  src="/images/theo-action-winger-nov-2024.jpg"
+                  alt="Theo Mayer on the wing, MAYER #5 jersey visible, attacking past a defender during a Lakers FC friendly"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <ScrollReveal stagger={1}>
               <div className="bg-graphite p-6">
@@ -199,9 +244,9 @@ export default function StoryPage() {
                   Style
                 </p>
                 <p className="text-white text-base">
-                  Creative playmaker. Technical, vision-led, two-footed. Not a
-                  power forward. A thinker who can beat a defender 1v1 and find
-                  the pass nobody else saw.
+                  Creative playmaker. Technical, vision-led. Two-footed passer
+                  and dribbler. Not a power forward. A thinker who can beat a
+                  defender 1v1 and find the pass nobody else saw.
                 </p>
               </div>
             </ScrollReveal>
@@ -218,11 +263,11 @@ export default function StoryPage() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  "Football IQ that coaches consistently describe as rare for his age",
+                  "Soccer IQ that coaches consistently describe as rare for his age",
                   "First touch rated above average to elite at his level",
                   "Full skill set with both feet: Maradona turns, tick-tacks, step-overs, rainbow flicks",
                   "Exceptional vision and passing, he makes teammates better",
-                  "Named team captain by his coach in fall 2024",
+                  "Named team captain for 2024-2025 by Coach Will Segovia",
                   "Craves coaching feedback, processes it, and gets better in the same session",
                   "Self-directed learner: watches training videos independently",
                   "Celebrates an assist with the same energy as a goal",
@@ -266,6 +311,136 @@ export default function StoryPage() {
                 ))}
               </div>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ============================================
+          TRAINING & DEVELOPMENT
+          ============================================ */}
+      <section className="bg-cloud py-20 md:py-32">
+        <div className="max-w-[800px] mx-auto px-6">
+          <ScrollReveal>
+            <p className="text-xs font-medium uppercase tracking-[3px] text-stone mb-4">
+              Off the Field
+            </p>
+            <h2
+              className="text-ink text-3xl md:text-4xl font-semibold uppercase leading-tight mb-8"
+              style={{
+                fontFamily: "var(--font-display)",
+                letterSpacing: "-1px",
+              }}
+            >
+              Training &amp; Development
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/theo-mike-hohensee-athletics-coaching-session.jpg"
+                  alt="Theo training with Mike Hohensee Jr. in an indoor turf facility, working on general athleticism"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
+              <div>
+                <h3
+                  className="text-ink text-xl font-semibold uppercase"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Private Training with Mike Hohensee Jr.
+                </h3>
+                <p className="text-charcoal text-sm leading-relaxed mt-4">
+                  Theo has trained with Mike Hohensee Jr. in sessions focused on
+                  general athleticism, physicality, winning 50/50 duels, and
+                  attacking with more urgency, areas identified as growth
+                  opportunities for his game.
+                </p>
+                <p className="text-charcoal text-sm leading-relaxed mt-3">
+                  Hohensee Jr. is a former Northwest Missouri State quarterback
+                  who was invited to the Dallas Cowboys&apos; 2024 rookie
+                  minicamp, where head coach Mike McCarthy singled him out for
+                  his command of the huddle. His father, Mike Hohensee Sr., is
+                  an AFL Hall of Famer, University of Minnesota Hall of Famer,
+                  and former NFL/CFL/USFL quarterback.
+                </p>
+                <p className="text-stone text-xs mt-4 italic">
+                  Hohensee Jr. now trains young athletes in the Chicago area,
+                  bringing a pro-level lens to youth athletic development.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ============================================
+          TOURNAMENT HISTORY
+          ============================================ */}
+      <section className="bg-snow py-20 md:py-32">
+        <div className="max-w-[800px] mx-auto px-6">
+          <ScrollReveal>
+            <p className="text-xs font-medium uppercase tracking-[3px] text-stone mb-4">
+              Competition
+            </p>
+            <h2
+              className="text-ink text-3xl md:text-4xl font-semibold uppercase leading-tight mb-8"
+              style={{
+                fontFamily: "var(--font-display)",
+                letterSpacing: "-1px",
+              }}
+            >
+              Tournament History
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ScrollReveal stagger={1}>
+              <div className="bg-white border border-mist p-6">
+                <p
+                  className="text-ink font-semibold text-base uppercase"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Puma Cup
+                </p>
+                <p className="text-stone text-xs uppercase tracking-wider mt-1">
+                  Aurora, IL
+                </p>
+                <p className="text-charcoal text-sm leading-relaxed mt-3">
+                  Multiple appearances. Competed against clubs from across the
+                  region.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal stagger={2}>
+              <div className="bg-white border border-mist p-6">
+                <p
+                  className="text-ink font-semibold text-base uppercase"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  USA Cup
+                </p>
+                <p className="text-stone text-xs uppercase tracking-wider mt-1">
+                  Minneapolis, MN
+                </p>
+                <p className="text-charcoal text-sm leading-relaxed mt-3">
+                  One of the largest and most well-organized youth tournaments
+                  in the country. Theo&apos;s first USA Cup was with a mixed
+                  team, top players blended with Tier 2. He stood out with
+                  goals, assists, and leadership.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal>
+            <p className="text-stone text-xs mt-6 italic">
+              Additional tournament details and photos to come.
+            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -315,9 +490,7 @@ export default function StoryPage() {
                   explosive acceleration. His balance of goals and assists as a
                   winger is similar to mine this season.&rdquo;
                 </p>
-                <p className="text-stone text-sm mt-3">
-                  — On Lamine Yamal
-                </p>
+                <p className="text-stone text-sm mt-3">— On Lamine Yamal</p>
               </div>
             </ScrollReveal>
 
@@ -390,6 +563,21 @@ export default function StoryPage() {
           ============================================ */}
       <section className="bg-carbon noise-bg py-20 md:py-32">
         <div className="max-w-[800px] mx-auto px-6">
+          {/* Jersey shot as visual accent */}
+          <ScrollReveal>
+            <div className="mb-12">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden">
+                <Image
+                  src="/images/theo-back-of-jersey-summer-2025-9-years-old.jpg"
+                  alt="Theo Mayer from behind, MAYER #5 jersey, looking out at the field, Summer 2025"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+
           <ScrollReveal>
             <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-4">
               Off the Pitch
@@ -410,9 +598,7 @@ export default function StoryPage() {
                 putting the same locked-in, self-imposed pressure on himself in
                 the classroom as on the pitch.
               </p>
-              <p className="text-white text-lg font-medium">
-                He got in.
-              </p>
+              <p className="text-white text-lg font-medium">He got in.</p>
               <p>
                 The pressure does not break him. It just takes him a minute to
                 settle. Then he runs.
