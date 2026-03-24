@@ -18,20 +18,20 @@ export default function Home() {
             fontFamily: "var(--font-display)",
             fontSize: "clamp(280px, 50vw, 600px)",
             fontWeight: 700,
-            color: "rgba(255, 255, 255, 0.03)",
+            color: "rgba(255, 255, 255, 0.06)",
             lineHeight: 1,
           }}
         >
           5
         </div>
 
-        {/* BG Layer 2: Lakers logo — small, top-left, natural color */}
-        <div className="absolute left-[4%] top-[12%] select-none pointer-events-none z-[2] opacity-[0.07]">
+        {/* BG Layer 2: Lakers logo — full color, aligned with name on left */}
+        <div className="absolute left-6 md:left-10 bottom-[200px] md:bottom-[260px] select-none pointer-events-none z-[2] opacity-90">
           <Image
             src="/images/lakers-fc-logo.png"
             alt=""
-            width={110}
-            height={110}
+            width={56}
+            height={56}
             aria-hidden="true"
           />
         </div>
@@ -58,9 +58,25 @@ export default function Home() {
               />
             </div>
 
-            {/* Giant stacked name — BEHIND player, left-aligned */}
+            {/* "THEO" — BEHIND player (z-5) */}
+            <div
+              className="absolute left-0 z-[5] select-none pointer-events-none uppercase font-bold hero-name-fade"
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(80px, 15vw, 220px)",
+                letterSpacing: "-0.03em",
+                lineHeight: 0.85,
+                color: "white",
+                bottom: "clamp(130px, 18vw, 255px)",
+              }}
+              aria-hidden="true"
+            >
+              Theo
+            </div>
+
+            {/* "MAYER" — IN FRONT of player (z-12) */}
             <h1
-              className="absolute left-0 bottom-[60px] md:bottom-[72px] z-[5] select-none pointer-events-none uppercase font-bold hero-name-fade"
+              className="absolute left-0 bottom-[60px] md:bottom-[72px] z-[12] select-none pointer-events-none uppercase font-bold hero-name-fade"
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "clamp(80px, 15vw, 220px)",
@@ -69,8 +85,7 @@ export default function Home() {
                 color: "white",
               }}
             >
-              <span className="block">Theo</span>
-              <span className="block">Mayer</span>
+              <span className="sr-only">Theo </span>Mayer
             </h1>
           </div>
 
