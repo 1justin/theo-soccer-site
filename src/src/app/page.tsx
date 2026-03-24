@@ -10,10 +10,10 @@ export default function Home() {
       {/* ============================================
           HERO SECTION
           ============================================ */}
-      <section className="relative min-h-screen flex items-center bg-void noise-bg overflow-hidden">
-        {/* Oversized jersey number texture */}
+      <section className="relative bg-void noise-bg overflow-hidden">
+        {/* Oversized jersey number texture — positioned behind the photo */}
         <div
-          className="absolute right-[-5%] top-1/2 -translate-y-1/2 select-none pointer-events-none z-0"
+          className="absolute right-[5%] top-[15%] select-none pointer-events-none z-0"
           style={{
             fontFamily: "var(--font-display)",
             fontSize: "clamp(200px, 35vw, 400px)",
@@ -25,7 +25,7 @@ export default function Home() {
           5
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 pt-24 pb-16 w-full">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 pt-20 pb-12 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text Content */}
             <div>
@@ -126,22 +126,27 @@ export default function Home() {
       <section className="bg-carbon py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6">
           <ScrollReveal>
-            <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-2">
+            <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-8">
               Selected Stats
-            </p>
-            <p className="text-white-secondary text-sm mb-8 max-w-[36rem]">
-              We don&apos;t obsess over stats or wins. We focus on development,
-              growth, and playing the right way. These numbers tell one part of
-              the story.
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <StatCard value="31+" label="Goals (Competitive)" stagger={0} />
+            <StatCard value="25+" label="Goals (Spring '25)" stagger={0} />
             <StatCard value="~1:1" label="Goal-to-Assist Ratio" stagger={1} />
             <StatCard value="3" label="Competitive Seasons" stagger={2} />
             <StatCard value="10" label="Years Old" stagger={3} />
             <StatCard value="'24-'25" label="Team Captain" stagger={4} />
           </div>
+          <ScrollReveal>
+            <p className="text-white-secondary text-sm mt-8 max-w-[36rem]">
+              We don&apos;t obsess over stats or wins. We focus on development,
+              growth, and playing the right way. These numbers tell one part of
+              the story.
+            </p>
+            <p className="text-white-tertiary text-xs mt-4 italic">
+              — Miranda &amp; Justin Mayer
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -229,31 +234,31 @@ export default function Home() {
             {[
               {
                 season: "Winter 2025-2026",
-                team: "Lakers FC Elite (Tier 1)",
+                team: "Lakers FC Elite",
                 level: "Playing Up — U11",
                 beat: "6 goals and counting. Building momentum at the highest club level.",
               },
               {
                 season: "Fall 2025",
-                team: "Lakers FC Elite (Tier 1)",
+                team: "Lakers FC Elite",
                 level: "Playing Up — U11",
                 beat: "Promoted to top team. Playing up a year. Shifted to facilitator. All assists, no goals. Absorbing the new speed.",
               },
               {
                 season: "Spring 2025",
-                team: "Lakers FC Select (Tier 3)",
+                team: "Lakers FC Select",
                 level: "U10",
                 beat: "Breakout season. 25+ goals (we stopped counting). Won the championship. Earned promotion to Elite.",
               },
               {
                 season: "2023-2024",
-                team: "Lakers FC Select (Tier 3)",
+                team: "Lakers FC Select",
                 level: "U10",
                 beat: "Became the go-to player for anything the coach needed. Wing and midfield. Named team captain.",
               },
               {
                 season: "Fall 2023",
-                team: "Lakers FC Select (Tier 3)",
+                team: "Lakers FC Select",
                 level: "U10",
                 beat: "Made the Lakers Select team. First competitive season.",
               },
@@ -265,7 +270,7 @@ export default function Home() {
               },
             ].map((row) => (
               <ScrollReveal key={row.season}>
-                <div className="bg-white border border-mist p-6 grid grid-cols-1 md:grid-cols-[180px_1fr_1fr] gap-4 items-center">
+                <div className="bg-white border border-mist p-6 grid grid-cols-1 md:grid-cols-[180px_200px_1fr] gap-4 items-center">
                   <div>
                     <p
                       className="text-ink font-semibold text-base"
@@ -352,39 +357,48 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-            {/* Basketball — major rewrite */}
+            {/* Row 1: Tournament Experience + Academics */}
             <ScrollReveal stagger={1}>
               <div className="bg-white border border-mist p-8 h-full">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl">🏀</span>
+                  <span className="text-3xl">🏆</span>
                   <h3
                     className="text-ink text-xl font-semibold uppercase"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
-                    Basketball MVP
+                    Tournament Experience
                   </h3>
                 </div>
-                <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  Named YMCA basketball league MVP, Spring 2026. In the
-                  championship game, Theo scored 20 of his team&apos;s 28 points
-                  while leading in assists, rebounds, and steals across both
-                  teams. Lost by 1 point.
-                </p>
-                <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  The opposing coach, who had coached Theo the previous season,
-                  told him after the game: &ldquo;I love you. You almost beat us
-                  all by yourself.&rdquo; His team had spent a third of their
-                  practice watching film of Theo to scout him. It didn&apos;t
-                  matter.
-                </p>
-                <p className="text-stone text-xs mt-4 italic">
-                  Invited to play up 2 years for summer league after a coach saw
-                  what he could do against older competition.
-                </p>
+                <div className="space-y-4 mt-4">
+                  <div>
+                    <p
+                      className="text-ink font-semibold text-sm"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      Puma Cup (Aurora, IL)
+                    </p>
+                    <p className="text-charcoal text-sm leading-relaxed mt-1">
+                      3 appearances. Competed against clubs from across the
+                      region.
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      className="text-ink font-semibold text-sm"
+                      style={{ fontFamily: "var(--font-display)" }}
+                    >
+                      USA Cup (Minneapolis, MN)
+                    </p>
+                    <p className="text-charcoal text-sm leading-relaxed mt-1">
+                      3 appearances. One of the largest youth tournaments in the
+                      country. Theo&apos;s first USA Cup was on a mixed team. He
+                      stood out with goals, assists, and leadership.
+                    </p>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
 
-            {/* Academics */}
             <ScrollReveal stagger={2}>
               <div className="bg-white border border-mist p-8 h-full">
                 <div className="flex items-center gap-3">
@@ -404,42 +418,38 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            {/* Tournament Experience */}
-            <ScrollReveal stagger={3}>
-              <div className="bg-white border border-mist p-8 md:col-span-2">
+            {/* Row 2: Basketball MVP — full width */}
+            <ScrollReveal stagger={3} className="md:col-span-2">
+              <div className="bg-white border border-mist p-8">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl">🏆</span>
+                  <span className="text-3xl">🏀</span>
                   <h3
                     className="text-ink text-xl font-semibold uppercase"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
-                    Tournament Experience
+                    On The Court
                   </h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3">
                   <div>
-                    <p
-                      className="text-ink font-semibold text-sm"
-                      style={{ fontFamily: "var(--font-display)" }}
-                    >
-                      Puma Cup (Aurora, IL)
-                    </p>
-                    <p className="text-charcoal text-sm leading-relaxed mt-1">
-                      Multiple appearances. Competed against clubs from across
-                      the region.
+                    <p className="text-charcoal text-sm leading-relaxed">
+                      Named YMCA basketball league MVP, Spring 2026. In the
+                      championship game, Theo scored 20 of his team&apos;s 28
+                      points while leading in assists, rebounds, and steals
+                      across both teams. Lost by 1 point.
                     </p>
                   </div>
                   <div>
-                    <p
-                      className="text-ink font-semibold text-sm"
-                      style={{ fontFamily: "var(--font-display)" }}
-                    >
-                      USA Cup (Minneapolis, MN)
+                    <p className="text-charcoal text-sm leading-relaxed">
+                      The opposing coach, who had coached Theo the previous
+                      season, told him after the game: &ldquo;I love you. You
+                      almost beat us all by yourself.&rdquo; His team had spent
+                      a third of their practice watching film of Theo to scout
+                      him. It didn&apos;t matter.
                     </p>
-                    <p className="text-charcoal text-sm leading-relaxed mt-1">
-                      One of the largest youth tournaments in the country.
-                      Theo&apos;s first USA Cup was on a mixed team. He stood
-                      out with goals, assists, and leadership.
+                    <p className="text-stone text-xs mt-3 italic">
+                      Invited to play up 2 years for summer league after a coach
+                      saw what he could do against older competition.
                     </p>
                   </div>
                 </div>
@@ -485,8 +495,9 @@ export default function Home() {
               Contact
             </h2>
             <p className="text-white-secondary mt-4 max-w-[28rem] mx-auto">
-              Interested in Theo as a player? Reach out directly. All
-              communication is handled through his parent.
+              Interested in Theo as a player? Reach out directly.
+              <br />
+              All communication is handled through his parent.
             </p>
           </div>
 

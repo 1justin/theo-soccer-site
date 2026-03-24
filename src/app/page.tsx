@@ -126,13 +126,8 @@ export default function Home() {
       <section className="bg-carbon py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6">
           <ScrollReveal>
-            <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-2">
+            <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-8">
               Selected Stats
-            </p>
-            <p className="text-white-secondary text-sm mb-8 max-w-[36rem]">
-              We don&apos;t obsess over stats or wins. We focus on development,
-              growth, and playing the right way. These numbers tell one part of
-              the story.
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -143,7 +138,12 @@ export default function Home() {
             <StatCard value="'24-'25" label="Team Captain" stagger={4} />
           </div>
           <ScrollReveal>
-            <p className="text-white-tertiary text-xs mt-6 italic">
+            <p className="text-white-secondary text-sm mt-8 max-w-[36rem]">
+              We don&apos;t obsess over stats or wins. We focus on development,
+              growth, and playing the right way. These numbers tell one part of
+              the story.
+            </p>
+            <p className="text-white-tertiary text-xs mt-4 italic">
               — Miranda &amp; Justin Mayer
             </p>
           </ScrollReveal>
@@ -196,9 +196,8 @@ export default function Home() {
               <p className="text-charcoal text-base leading-relaxed mt-4">
                 Promoted from house league to the Lakers Elite squad in under
                 two seasons. Named team captain for the 2024-2025 season by
-                Coach Will Segovia, Director of Coaching. The kind of kid who
-                makes everyone around him better because he&apos;s thinking two
-                moves ahead.
+                Coach Tyler Birt. The kind of kid who makes everyone around him
+                better because he&apos;s thinking two moves ahead.
               </p>
               <Link
                 href="/story"
@@ -420,15 +419,15 @@ export default function Home() {
             </ScrollReveal>
 
             {/* Row 2: Basketball MVP — full width */}
-            <ScrollReveal stagger={3}>
-              <div className="bg-white border border-mist p-8 md:col-span-2">
+            <ScrollReveal stagger={3} className="md:col-span-2">
+              <div className="bg-white border border-mist p-8">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">🏀</span>
                   <h3
                     className="text-ink text-xl font-semibold uppercase"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
-                    Basketball MVP
+                    On The Court
                   </h3>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3">
@@ -496,8 +495,9 @@ export default function Home() {
               Contact
             </h2>
             <p className="text-white-secondary mt-4 max-w-[28rem] mx-auto">
-              Interested in Theo as a player? Reach out directly. All
-              communication is handled through his parent.
+              Interested in Theo as a player? Reach out directly.
+              <br />
+              All communication is handled through his parent.
             </p>
           </div>
 

@@ -24,7 +24,7 @@ export default function Footer() {
               href="/"
               className="text-sm text-white-secondary hover:text-white uppercase tracking-wider transition-colors"
             >
-              Home
+              The Player
             </Link>
             <Link
               href="/story"
@@ -36,7 +36,7 @@ export default function Footer() {
               href="/why"
               className="text-sm text-white-secondary hover:text-white uppercase tracking-wider transition-colors"
             >
-              Why This Site
+              The Build
             </Link>
           </div>
 
@@ -51,19 +51,16 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-smoke flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white-tertiary text-xs">
-            &copy; {new Date().getFullYear()} Theo Mayer Soccer. All rights
-            reserved.
-          </p>
-          <p className="text-white-tertiary text-xs">
-            Built by{" "}
+            &copy; {new Date().getFullYear()}{" "}
             <a
               href="https://wrkstream.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white-secondary hover:text-volt transition-colors"
             >
-              WRKSTREAM
+              WRKSTREAM LLC
             </a>
+            . All rights reserved.
           </p>
         </div>
       </div>

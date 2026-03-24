@@ -62,7 +62,7 @@ export default function StoryPage() {
         <div className="max-w-[800px] mx-auto px-6">
           <ScrollReveal>
             <p className="text-xs font-medium uppercase tracking-[3px] text-stone mb-4">
-              The Arc That Matters
+              The Story That Matters
             </p>
             <h2
               className="text-ink text-3xl md:text-4xl font-semibold uppercase leading-tight mb-8"
@@ -154,7 +154,7 @@ export default function StoryPage() {
                 {
                   period: "2023-2024",
                   title: "The Swiss Army Knife",
-                  desc: "Became the go-to player for anything the coach needed. Wing and midfield. Named team captain for the 2024-2025 season by Coach Will Segovia.",
+                  desc: "Became the go-to player for anything the coach needed. Wing and midfield. Named team captain for the 2024-2025 season by Coach Tyler Birt.",
                 },
                 {
                   period: "Spring 2025",
@@ -232,9 +232,9 @@ export default function StoryPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-stretch">
             <ScrollReveal stagger={1}>
-              <div className="bg-graphite p-6">
+              <div className="bg-graphite p-6 h-full flex flex-col">
                 <p className="text-xs font-medium uppercase tracking-[1.5px] text-white-tertiary mb-3">
                   Position
                 </p>
@@ -246,7 +246,7 @@ export default function StoryPage() {
             </ScrollReveal>
 
             <ScrollReveal stagger={2}>
-              <div className="bg-graphite p-6">
+              <div className="bg-graphite p-6 h-full flex flex-col">
                 <p className="text-xs font-medium uppercase tracking-[1.5px] text-white-tertiary mb-3">
                   Style
                 </p>
@@ -274,7 +274,7 @@ export default function StoryPage() {
                   "First touch rated above average to elite at his level",
                   "Full skill set with both feet: Maradona turns, tick-tacks, step-overs, rainbow flicks",
                   "Exceptional vision and passing, he makes teammates better",
-                  "Named team captain for the 2024-2025 season by Coach Will Segovia",
+                  "Named team captain for the 2024-2025 season by Coach Tyler Birt",
                   "Craves coaching feedback, processes it, and gets better in the same session",
                   "Self-directed learner: watches training videos independently",
                   "Celebrates an assist with the same energy as a goal",
@@ -380,72 +380,6 @@ export default function StoryPage() {
                 </p>
               </div>
             </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================
-          TOURNAMENT HISTORY
-          ============================================ */}
-      <section className="bg-snow py-20 md:py-32">
-        <div className="max-w-[800px] mx-auto px-6">
-          <ScrollReveal>
-            <p className="text-xs font-medium uppercase tracking-[3px] text-stone mb-4">
-              Competition
-            </p>
-            <h2
-              className="text-ink text-3xl md:text-4xl font-semibold uppercase leading-tight mb-8"
-              style={{
-                fontFamily: "var(--font-display)",
-                letterSpacing: "-1px",
-              }}
-            >
-              Tournament History
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ScrollReveal stagger={1}>
-              <div className="bg-white border border-mist p-6">
-                <p
-                  className="text-ink font-semibold text-base uppercase"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  Puma Cup
-                </p>
-                <p className="text-stone text-xs uppercase tracking-wider mt-1">
-                  Aurora, IL
-                </p>
-                <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  3 appearances. Competed against clubs from across the region.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal stagger={2}>
-              <div className="bg-white border border-mist p-6">
-                <p
-                  className="text-ink font-semibold text-base uppercase"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  USA Cup
-                </p>
-                <p className="text-stone text-xs uppercase tracking-wider mt-1">
-                  Minneapolis, MN
-                </p>
-                <p className="text-charcoal text-sm leading-relaxed mt-3">
-                  3 appearances. One of the largest youth tournaments in the
-                  country. Theo&apos;s first USA Cup was on a mixed team. He
-                  stood out with goals, assists, and leadership.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal>
-            <p className="text-stone text-xs mt-6 italic">
-              Additional tournament details and photos to come.
-            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -680,8 +614,9 @@ export default function StoryPage() {
               Contact
             </h2>
             <p className="text-white-secondary mt-4 max-w-[28rem] mx-auto">
-              Interested in Theo as a player? Reach out directly. All
-              communication is handled through his parent.
+              Interested in Theo as a player? Reach out directly.
+              <br />
+              All communication is handled through his parent.
             </p>
           </div>
 
