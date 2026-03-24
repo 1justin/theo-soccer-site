@@ -79,14 +79,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Interim Hero Image (back-of-jersey shot) */}
+            {/* Right: Hero Image — Studio shot */}
             <div className="relative flex items-center justify-center">
               <div className="relative w-full max-w-[28rem] aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/images/theo-back-of-jersey-summer-2025-9-years-old.jpg"
-                  alt="Theo Mayer wearing MAYER #5 jersey, looking out at the field, Summer 2025"
+                  src="/images/theo-hero-studio-ball-on-shoulder.jpg"
+                  alt="Theo Mayer in Lakers FC jersey, pointing at camera with soccer ball on shoulder"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
