@@ -13,7 +13,7 @@ export default function Home() {
       <section className="relative bg-void noise-bg overflow-hidden">
         {/* BG Layer 1: #5 watermark — large, right side */}
         <div
-          className="absolute right-[5%] top-[23%] select-none pointer-events-none z-[1]"
+          className="absolute right-[5%] top-[23%] md:top-[8%] select-none pointer-events-none z-[1]"
           style={{
             fontFamily: "var(--font-display)",
             fontSize: "clamp(280px, 50vw, 600px)",
@@ -25,22 +25,22 @@ export default function Home() {
           5
         </div>
 
-        {/* BG Layer 2: Lakers logo — full color, top-left, left-aligned with name */}
-        <div className="absolute left-6 md:left-10 top-[80px] md:top-[72px] select-none pointer-events-none z-[2]">
-          <Image
-            src="/images/lakers-fc-logo.png"
-            alt=""
-            width={56}
-            height={56}
-            aria-hidden="true"
-          />
-        </div>
-
         {/* Hero layout container */}
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-10 pt-20 pb-10 md:pb-14">
 
+          {/* Lakers logo — inside container so it aligns with name's left edge */}
+          <div className="relative z-[2] mb-4 select-none pointer-events-none">
+            <Image
+              src="/images/lakers-fc-logo.png"
+              alt=""
+              width={48}
+              height={48}
+              aria-hidden="true"
+            />
+          </div>
+
           {/* Main composition area */}
-          <div className="relative" style={{ minHeight: "clamp(500px, 70vh, 720px)" }}>
+          <div className="relative" style={{ minHeight: "clamp(420px, 60vh, 660px)" }}>
 
             {/* Player image — positioned right, in front of name */}
             <div
@@ -67,7 +67,7 @@ export default function Home() {
                 letterSpacing: "-0.03em",
                 lineHeight: 0.85,
                 color: "white",
-                bottom: "clamp(130px, 18vw, 255px)",
+                bottom: "clamp(148px, 21vw, 270px)",
               }}
               aria-hidden="true"
             >
@@ -76,13 +76,14 @@ export default function Home() {
 
             {/* "MAYER" — IN FRONT of player (z-12) */}
             <h1
-              className="absolute left-0 bottom-[60px] md:bottom-[72px] z-[12] select-none pointer-events-none uppercase font-bold hero-name-fade"
+              className="absolute left-0 z-[12] select-none pointer-events-none uppercase font-bold hero-name-fade"
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "clamp(80px, 15vw, 220px)",
                 letterSpacing: "-0.03em",
                 lineHeight: 0.85,
                 color: "white",
+                bottom: "clamp(48px, 5vw, 72px)",
               }}
             >
               <span className="sr-only">Theo </span>Mayer
