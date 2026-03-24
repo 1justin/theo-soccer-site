@@ -8,15 +8,15 @@ export default function Home() {
   return (
     <>
       {/* ============================================
-          HERO SECTION
+          HERO SECTION — "The Moretti" (Option B)
           ============================================ */}
-      <section className="relative bg-void noise-bg overflow-hidden min-h-screen flex flex-col">
-        {/* BG Layer 1: #5 watermark — large, centered */}
+      <section className="relative bg-void noise-bg overflow-hidden">
+        {/* BG Layer 1: #5 watermark — large, right side */}
         <div
-          className="absolute left-1/2 -translate-x-1/2 top-[5%] select-none pointer-events-none z-[1]"
+          className="absolute right-[5%] top-[8%] select-none pointer-events-none z-[1]"
           style={{
             fontFamily: "var(--font-display)",
-            fontSize: "clamp(300px, 55vw, 700px)",
+            fontSize: "clamp(280px, 50vw, 600px)",
             fontWeight: 700,
             color: "rgba(255, 255, 255, 0.03)",
             lineHeight: 1,
@@ -25,42 +25,27 @@ export default function Home() {
           5
         </div>
 
-        {/* BG Layer 2: Lakers logo — subtle, left side */}
-        <div className="absolute left-[6%] top-[18%] select-none pointer-events-none z-[2] opacity-[0.04]">
+        {/* BG Layer 2: Lakers logo — small, top-left, natural color */}
+        <div className="absolute left-[4%] top-[12%] select-none pointer-events-none z-[2] opacity-[0.07]">
           <Image
             src="/images/lakers-fc-logo.png"
             alt=""
-            width={220}
-            height={220}
+            width={110}
+            height={110}
             aria-hidden="true"
           />
         </div>
 
-        {/* Main hero content */}
-        <div className="relative flex-1 flex flex-col max-w-[1400px] mx-auto px-6 w-full pt-20">
+        {/* Hero layout container */}
+        <div className="relative max-w-[1400px] mx-auto px-6 md:px-10 pt-20 pb-10 md:pb-14">
 
-          {/* Center stage: Player + Name layered */}
-          <div className="relative flex-1 flex justify-center items-end">
+          {/* Main composition area */}
+          <div className="relative" style={{ minHeight: "clamp(500px, 70vh, 720px)" }}>
 
-            {/* Giant name — BEHIND player */}
-            <h1
-              className="absolute inset-x-0 bottom-[18%] md:bottom-[22%] text-center z-[5] select-none pointer-events-none uppercase font-bold hero-name-fade"
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(72px, 16vw, 240px)",
-                letterSpacing: "-0.03em",
-                lineHeight: 0.82,
-                color: "white",
-              }}
-            >
-              <span className="block">Theo</span>
-              <span className="block">Mayer</span>
-            </h1>
-
-            {/* Player image — IN FRONT of name */}
+            {/* Player image — positioned right, in front of name */}
             <div
-              className="relative z-[10] hero-player-fade"
-              style={{ width: "clamp(250px, 38vw, 500px)" }}
+              className="absolute right-0 md:right-[5%] bottom-0 z-[8] hero-player-fade"
+              style={{ width: "clamp(240px, 36vw, 460px)" }}
             >
               <Image
                 src="/images/theo-hero-studio-ball-on-shoulder.png"
@@ -69,18 +54,33 @@ export default function Home() {
                 height={1440}
                 className="w-full h-auto"
                 priority
-                sizes="(max-width: 768px) 70vw, 38vw"
+                sizes="(max-width: 768px) 65vw, 36vw"
               />
             </div>
+
+            {/* Giant stacked name — BEHIND player, left-aligned */}
+            <h1
+              className="absolute left-0 bottom-[60px] md:bottom-[72px] z-[5] select-none pointer-events-none uppercase font-bold hero-name-fade"
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(80px, 15vw, 220px)",
+                letterSpacing: "-0.03em",
+                lineHeight: 0.85,
+                color: "white",
+              }}
+            >
+              <span className="block">Theo</span>
+              <span className="block">Mayer</span>
+            </h1>
           </div>
 
-          {/* Bottom info bar */}
-          <div className="relative z-[20] flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pb-10 md:pb-14 pt-4">
+          {/* Info bar — below the composition */}
+          <div className="relative z-[20] flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pt-6 md:pt-4 border-t border-white/10">
             <div>
               <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-3 hero-fade">
                 Forward / Midfielder — #5
               </p>
-              <p className="text-white-secondary text-base max-w-[26rem] hero-fade">
+              <p className="text-white-secondary text-[15px] max-w-[26rem] leading-relaxed hero-fade">
                 Creative winger and midfielder with elite soccer IQ. Two-footed
                 passer and dribbler. Comfortable on either wing. Captain
                 &apos;24-&apos;25. Glen Ellyn Lakers FC Elite.
@@ -106,17 +106,17 @@ export default function Home() {
         {/* Hero animations */}
         <style>{`
           .hero-player-fade {
-            animation: heroPlayerIn 0.8s ease-out 0.1s both;
+            animation: heroPlayerIn 0.8s ease-out 0.15s both;
           }
           .hero-name-fade {
-            animation: heroNameIn 0.6s ease-out 0.3s both;
+            animation: heroNameIn 0.6s ease-out 0.35s both;
           }
           .hero-fade {
             animation: heroFadeUp 0.5s ease-out both;
           }
-          .hero-fade:nth-child(1) { animation-delay: 0.5s; }
-          .hero-fade:nth-child(2) { animation-delay: 0.6s; }
-          .hero-fade:nth-child(3) { animation-delay: 0.7s; }
+          .hero-fade:nth-child(1) { animation-delay: 0.55s; }
+          .hero-fade:nth-child(2) { animation-delay: 0.65s; }
+          .hero-fade:nth-child(3) { animation-delay: 0.75s; }
 
           @keyframes heroPlayerIn {
             from {
@@ -131,17 +131,17 @@ export default function Home() {
           @keyframes heroNameIn {
             from {
               opacity: 0;
-              transform: scale(0.92);
+              transform: translateX(-20px);
             }
             to {
               opacity: 1;
-              transform: scale(1);
+              transform: translateX(0);
             }
           }
           @keyframes heroFadeUp {
             from {
               opacity: 0;
-              transform: translateY(20px);
+              transform: translateY(16px);
             }
             to {
               opacity: 1;
