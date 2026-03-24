@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ============================================
+   THEO MAYER SOCCER — DESIGN SYSTEM
+   Based on theo-mayer-style-guide.md v1.0
+   ============================================ */
+
+@theme inline {
+  /* Primary: Pitch Black */
+  --color-void: #0A0A0A;
+  --color-carbon: #141414;
+  --color-graphite: #1E1E1E;
+  --color-smoke: #2A2A2A;
+
+  /* Secondary: Field Green */
+  --color-dew: #E8F5E9;
+  --color-spring: #C8E6C9;
+  --color-pitch: #2E7D32;
+  --color-field: #1B5E20;
+  --color-forest: #145218;
+  --color-deep: #0D3B12;
+
+  /* Accent: Electric Lime */
+  --color-volt: #C6FF00;
+  --color-volt-hover: #AEEA00;
+  --color-volt-muted: #E8FF80;
+
+  /* Whites & Light Surfaces */
+  --color-snow: #FAFAFA;
+  --color-cloud: #F5F5F5;
+  --color-mist: #EEEEEE;
+
+  /* Text Colors */
+  --color-ink: #121212;
+  --color-charcoal: #424242;
+  --color-stone: #757575;
+
+  /* Fonts */
+  --font-display: "Oswald", system-ui, sans-serif;
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", monospace;
+
+  /* Spacing (8-point grid) */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 96px;
+  --spacing-4xl: 120px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-void);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection color */
+::selection {
+  background: var(--color-volt);
+  color: var(--color-void);
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-white-secondary {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.text-white-tertiary {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+/* ============================================
+   NOISE TEXTURE (hero/dark sections)
+   ============================================ */
+
+.noise-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger-1 { transition-delay: 0ms; }
+.reveal-stagger-2 { transition-delay: 100ms; }
+.reveal-stagger-3 { transition-delay: 200ms; }
+.reveal-stagger-4 { transition-delay: 300ms; }
+
+/* ============================================
+   STAT COUNT-UP (prevent layout shift)
+   ============================================ */
+
+.stat-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   NAV GLASS EFFECT
+   ============================================ */
+
+.nav-glass {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-glass.scrolled {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-volt);
+}
