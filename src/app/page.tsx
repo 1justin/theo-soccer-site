@@ -83,10 +83,10 @@ export default function Home() {
             <div className="relative flex items-center justify-center">
               <div className="relative w-full max-w-[28rem] aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/images/theo-hero-studio-ball-on-shoulder.jpg"
+                  src="/images/theo-hero-studio-ball-on-shoulder.png"
                   alt="Theo Mayer in Lakers FC jersey, pointing at camera with soccer ball on shoulder"
                   fill
-                  className="object-cover object-top"
+                  className="object-contain object-bottom"
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
