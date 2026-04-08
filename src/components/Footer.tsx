@@ -36,7 +36,7 @@ export default function Footer() {
               href="/why"
               className="text-sm text-white-secondary hover:text-white uppercase tracking-wider transition-colors"
             >
-              The Build
+              About the Site
             </Link>
           </div>
 

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "The Player" },
   { href: "/story", label: "The Story" },
-  { href: "/why", label: "The Build" },
+  { href: "/why", label: "About the Site" },
 ];
 
 export default function Nav() {
@@ -60,7 +60,7 @@ export default function Nav() {
           ))}
           <Link
             href="/#contact"
-            className="bg-volt text-void text-sm font-semibold uppercase tracking-wider px-6 py-2.5 hover:bg-volt-hover transition-colors"
+            className="bg-volt text-void text-sm font-semibold uppercase tracking-wider px-6 py-3 hover:bg-volt-hover transition-colors"
           >
             Contact
           </Link>

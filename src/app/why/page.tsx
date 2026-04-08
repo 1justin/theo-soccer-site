@@ -31,7 +31,7 @@ export default function WhyPage() {
 
         <div className="relative z-10 max-w-[800px] mx-auto px-6">
           <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-6">
-            Behind the Build
+            Behind the Site
           </p>
           <h1
             className="uppercase font-bold leading-[0.9]"

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import StatCard from "@/components/StatCard";
-import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
@@ -94,7 +93,7 @@ export default function Home() {
           <div className="relative z-[20] flex flex-col md:flex-row justify-between items-start md:items-end gap-6 pt-6 md:pt-4 border-t border-white/10">
             <div>
               <p className="text-xs font-medium uppercase tracking-[3px] text-white-tertiary mb-3 hero-fade">
-                Forward / Midfielder — #5
+                Forward / Midfielder — #5 — Born 2015
               </p>
               <p className="text-white-secondary text-[15px] max-w-[26rem] leading-relaxed hero-fade">
                 Creative winger and midfielder with elite soccer IQ. Two-footed
@@ -178,20 +177,16 @@ export default function Home() {
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <StatCard value="25+" label="Goals (Spring '25)" stagger={0} />
-            <StatCard value="~1:1" label="Goal-to-Assist Ratio" stagger={1} />
+            <StatCard value="25+" label="Goals — NISL Spring '25 Season" stagger={0} />
+            <StatCard value="~1:1" label="Goal-to-Assist Ratio (Spring '25)" stagger={1} />
             <StatCard value="3" label="Competitive Seasons" stagger={2} />
-            <StatCard value="10" label="Years Old" stagger={3} />
-            <StatCard value="'24-'25" label="Team Captain" stagger={4} />
+            <StatCard value="10" label="Years Old (Born 2015)" stagger={3} />
+            <StatCard value="'24-'25" label="Team Captain, Lakers Select" stagger={4} />
           </div>
           <ScrollReveal>
             <p className="text-white-secondary text-sm mt-8 max-w-[36rem]">
-              We don&apos;t obsess over stats or wins. We focus on development,
-              growth, and playing the right way. These numbers tell one part of
-              the story.
-            </p>
-            <p className="text-white-tertiary text-xs mt-4 italic">
-              — Miranda &amp; Justin Mayer
+              Development matters more than numbers. These stats tell one part
+              of the story.
             </p>
           </ScrollReveal>
         </div>
@@ -356,7 +351,7 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-2xl">
             <ScrollReveal stagger={1}>
               <div className="border-l-[3px] border-pitch pl-6 py-2">
                 <p className="text-charcoal text-lg italic leading-relaxed">
@@ -369,14 +364,57 @@ export default function Home() {
                 </p>
               </div>
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
 
-            <ScrollReveal stagger={2}>
-              <div className="border-l-[3px] border-mist pl-6 py-2">
-                <p className="text-stone text-lg italic leading-relaxed">
-                  Additional coach testimonials will be added as they are
-                  collected.
+      {/* ============================================
+          ATHLETIC PROFILE SECTION
+          ============================================ */}
+      <section className="bg-cloud py-20 md:py-32">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <ScrollReveal>
+            <p className="text-xs font-medium uppercase tracking-[3px] text-stone mb-4">
+              Physical Development
+            </p>
+            <h2
+              className="text-ink text-4xl md:text-5xl font-semibold uppercase leading-tight mb-12"
+              style={{
+                fontFamily: "var(--font-display)",
+                letterSpacing: "-1px",
+              }}
+            >
+              Athletic Profile
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ScrollReveal stagger={1}>
+              <div className="bg-white border border-mist p-8 h-full">
+                <p className="text-xs font-medium uppercase tracking-[1.5px] text-stone mb-2">
+                  Height
                 </p>
-                <p className="text-stone text-sm mt-4">— More coming soon</p>
+                <p
+                  className="text-ink text-3xl font-bold"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  4&apos;10&rdquo;
+                </p>
+                <p className="text-stone text-sm mt-2">Age 10 (Born 2015)</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal stagger={2} className="md:col-span-2">
+              <div className="bg-white border border-mist p-8 h-full">
+                <p className="text-xs font-medium uppercase tracking-[1.5px] text-stone mb-2">
+                  Athletic Background
+                </p>
+                <p className="text-charcoal text-sm leading-relaxed">
+                  Both parents are former competitive athletes. Father: 6&apos;3&rdquo;,
+                  college basketball (D1 program, UW Milwaukee). Mother:
+                  competitive ballerina (top in the state of Wisconsin) and
+                  state-qualified golfer.
+                </p>
               </div>
             </ScrollReveal>
           </div>
@@ -438,8 +476,8 @@ export default function Home() {
                     </p>
                     <p className="text-charcoal text-sm leading-relaxed mt-1">
                       3 appearances. One of the largest youth tournaments in the
-                      country. Theo&apos;s first USA Cup was on a mixed team. He
-                      stood out with goals, assists, and leadership.
+                      country. 5 goals in the 2024 edition. Won more than lost,
+                      all against out-of-market teams.
                     </p>
                   </div>
                 </div>
@@ -465,42 +503,104 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            {/* Row 2: Basketball MVP — full width */}
-            <ScrollReveal stagger={3} className="md:col-span-2">
-              <div className="bg-white border border-mist p-8">
+            {/* Row 2: Multi-Sport Athlete */}
+            <ScrollReveal stagger={3}>
+              <div className="bg-white border border-mist p-8 h-full">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">🏀</span>
                   <h3
                     className="text-ink text-xl font-semibold uppercase"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
-                    On The Court
+                    Multi-Sport Athlete
                   </h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3">
-                  <div>
-                    <p className="text-charcoal text-sm leading-relaxed">
-                      Named YMCA basketball league MVP, Spring 2026. In the
-                      championship game, Theo scored 20 of his team&apos;s 28
-                      points while leading in assists, rebounds, and steals
-                      across both teams. Lost by 1 point.
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-charcoal text-sm leading-relaxed">
-                      The opposing coach, who had coached Theo the previous
-                      season, told him after the game: &ldquo;I love you. You
-                      almost beat us all by yourself.&rdquo; His team had spent
-                      a third of their practice watching film of Theo to scout
-                      him. It didn&apos;t matter.
-                    </p>
-                    <p className="text-stone text-xs mt-3 italic">
-                      Invited to play up 2 years for summer league after a coach
-                      saw what he could do against older competition.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-charcoal text-sm leading-relaxed mt-3">
+                  Active in competitive basketball year-round. Cross-training
+                  builds athleticism, coordination, and court vision that
+                  transfers directly to the pitch. No early specialization.
+                </p>
               </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+          SEE HIM PLAY SECTION
+          ============================================ */}
+      <section className="bg-snow py-20 md:py-32">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <ScrollReveal>
+            <p className="text-xs font-medium uppercase tracking-[3px] text-stone mb-4">
+              Upcoming Events
+            </p>
+            <h2
+              className="text-ink text-4xl md:text-5xl font-semibold uppercase leading-tight mb-4"
+              style={{
+                fontFamily: "var(--font-display)",
+                letterSpacing: "-1px",
+              }}
+            >
+              See Him Play
+            </h2>
+            <p className="text-charcoal text-base mb-12 max-w-[32rem]">
+              Currently playing for{" "}
+              <a
+                href="https://lakersfc.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-field font-semibold hover:text-pitch transition-colors border-b border-pitch/30"
+              >
+                Glen Ellyn Lakers FC Elite
+              </a>
+              .
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ScrollReveal stagger={1}>
+              <a
+                href="https://grit.tourneycentral.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-mist p-8 h-full hover:border-pitch transition-colors group"
+              >
+                <p className="text-xs font-medium uppercase tracking-[1.5px] text-stone mb-2">
+                  May 2026
+                </p>
+                <h3
+                  className="text-ink text-xl font-semibold uppercase group-hover:text-pitch transition-colors"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  Grand Rapids Invitational
+                </h3>
+                <p className="text-charcoal text-sm leading-relaxed mt-2">
+                  Grand Rapids, MI
+                </p>
+              </a>
+            </ScrollReveal>
+
+            <ScrollReveal stagger={2}>
+              <a
+                href="https://usacup.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white border border-mist p-8 h-full hover:border-pitch transition-colors group"
+              >
+                <p className="text-xs font-medium uppercase tracking-[1.5px] text-stone mb-2">
+                  Summer 2026
+                </p>
+                <h3
+                  className="text-ink text-xl font-semibold uppercase group-hover:text-pitch transition-colors"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  USA Cup
+                </h3>
+                <p className="text-charcoal text-sm leading-relaxed mt-2">
+                  Minneapolis, MN
+                </p>
+              </a>
             </ScrollReveal>
           </div>
         </div>
@@ -544,11 +644,16 @@ export default function Home() {
             <p className="text-white-secondary mt-4 max-w-[28rem] mx-auto">
               Interested in Theo as a player? Reach out directly.
               <br />
-              All communication is handled through his parent.
+              All communication is handled through Justin Mayer, Theo&apos;s
+              father.
             </p>
+            <a
+              href="mailto:cjmayer@gmail.com"
+              className="inline-block mt-8 bg-volt text-void text-sm font-semibold uppercase tracking-wider px-10 py-4 hover:bg-volt-hover transition-colors"
+            >
+              Email Justin Mayer
+            </a>
           </div>
-
-          <ContactForm />
         </div>
       </section>
     </>

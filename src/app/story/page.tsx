@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
-import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "The Story — Theo Mayer Soccer",
@@ -475,14 +474,8 @@ export default function StoryPage() {
                 corner.&rdquo;
               </p>
               <p>
-                The goal was scored late in the game, effectively sealing the
-                result, after a solo run from his own half, dribbling past four
-                opponents.
-              </p>
-              <p>
-                It was not the most technically difficult thing he has done. But
-                it was the moment that felt most like him: a long run, a problem
-                to solve, and the ball in the net at the end of it.
+                Scored late in the game to seal the result. A solo run from his
+                own half, past four defenders, finished into the bottom corner.
               </p>
             </div>
           </ScrollReveal>
@@ -616,11 +609,16 @@ export default function StoryPage() {
             <p className="text-white-secondary mt-4 max-w-[28rem] mx-auto">
               Interested in Theo as a player? Reach out directly.
               <br />
-              All communication is handled through his parent.
+              All communication is handled through Justin Mayer, Theo&apos;s
+              father.
             </p>
+            <a
+              href="mailto:cjmayer@gmail.com"
+              className="inline-block mt-8 bg-volt text-void text-sm font-semibold uppercase tracking-wider px-10 py-4 hover:bg-volt-hover transition-colors"
+            >
+              Email Justin Mayer
+            </a>
           </div>
-
-          <ContactForm />
         </div>
       </section>
     </>
